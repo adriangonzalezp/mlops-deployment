@@ -34,7 +34,6 @@ pipeline = Pipeline(steps=[
 # --------------------------------------------
 param_grid_logreg = {
     'classifier__C': [0.1, 1, 10, 100],
-    'classifier__penalty': ['l1', 'l2']
 }
 
 # --------------------------------------------
@@ -72,3 +71,5 @@ with open("metrics.txt", 'w') as outfile:
 # --------------------------------------------
 model_filename = 'model/logistic_regression_model.pkl'
 joblib.dump(best_model, model_filename)
+
+print("------Se completo el entrenamiento.------")
